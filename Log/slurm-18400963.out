@@ -1,0 +1,34 @@
+==========================================
+SLURM_JOB_ID = 18400963
+SLURM_JOB_NODELIST = d05-43
+TMPDIR = /tmp/SLURM_18400963
+==========================================
+Copyright (C) 2022 Brian L. Browning
+Enter "java -jar flare.jar" to print a list of command line arguments
+
+Program             :  flare.jar  [ version 0.4.2, 21Nov23.67d ]
+Start Time          :  03:41 PM PST on 08 Dec 2023
+Max Memory          :  2474 MB
+
+Parameters
+  ref               :  /project/jazlynmo_738/DataRepository/Human/1000GenomeNYGC_hg38/CCDG_14151_B01_GRM_WGS_2020-08-05_chr22.filtered.shapeit2-duohmm-phased.nodupmarkers.snps.vcf.gz
+  ref-panel         :  refPanels/ASW.ref.panel
+  gt                :  admixedSubsetVCFs/ASW_hg38_chr22.vcf.gz
+  map               :  GRCh38_Map/plink.chr22.GRCh38.adjusted.map
+  out               :  ASW_local_ancestry_chr22
+  array             :  false
+  min-maf           :  0.005
+  min-mac           :  50
+  probs             :  false
+  gen               :  10.0
+  em                :  true
+  nthreads          :  1
+  seed              :  -99999
+
+Statistics
+  reference samples :  357
+  target samples    :  74
+  markers           :  96548
+
+Wallclock Time      :  7 minutes 12 seconds
+End Time            :  03:48 PM PST on 08 Dec 2023

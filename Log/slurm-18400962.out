@@ -1,0 +1,6 @@
+==========================================
+SLURM_JOB_ID = 18400962
+SLURM_JOB_NODELIST = d05-43
+TMPDIR = /tmp/SLURM_18400962
+==========================================
+Error: Unable to access jarfile ref=/CCDG_14151_B01_GRM_WGS_2020-08-05_chr22.filtered.shapeit2-duohmm-phased.nodupmarkers.snps.vcf.gz

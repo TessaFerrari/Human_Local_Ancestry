@@ -1,0 +1,99 @@
+nohup: ignoring input
+Config file config.yaml is extended by additional config specified via the command line.
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Job stats:
+job            count
+-----------  -------
+all                1
+generate_gt        4
+run_flare         16
+total             21
+
+Select jobs to execute...
+
+[Mon Dec 18 16:49:39 2023]
+rule generate_gt:
+    input: /project/jazlynmo_738/DataRepository/Human/1000GenomeNYGC_hg38/FileInformation/pops/CLM_hg38.txt, /project/jazlynmo_738/DataRepository/Human/1000GenomeNYGC_hg38/CCDG_14151_B01_GRM_WGS_2020-08-05_chr21.filtered.shapeit2-duohmm-phased.nodupmarkers.snps.vcf.gz
+    output: admixedSubsetVCFs/CLM_hg38_chr21.vcf.gz
+    jobid: 43
+    reason: Missing output files: admixedSubsetVCFs/CLM_hg38_chr21.vcf.gz
+    wildcards: anc=CLM, chr=21
+    resources: mem_mb=12000, mem_mib=11445, disk_mb=1000, disk_mib=954, tmpdir=<TBD>, slurm_account=jazlynmo_738, slurm_partition=qcb, runtime=1440, tasks=16
+
+Job 43 has been submitted with SLURM jobid 18519636 (log: .snakemake/slurm_logs/rule_generate_gt/18519636.log).
+[Mon Dec 18 16:51:30 2023]
+Finished job 43.
+1 of 21 steps (5%) done
+Select jobs to execute...
+
+[Mon Dec 18 16:51:30 2023]
+rule run_flare:
+    input: /project/jazlynmo_738/DataRepository/Human/1000GenomeNYGC_hg38/CCDG_14151_B01_GRM_WGS_2020-08-05_chr21.filtered.shapeit2-duohmm-phased.nodupmarkers.snps.vcf.gz, refPanels/CLM.ref.panel, admixedSubsetVCFs/CLM_hg38_chr21.vcf.gz, GRCh38_Map/plink.chr21.GRCh38.adjusted.map
+    output: Out/CLM_local_ancestry_chr21.anc.vcf.gz, Out/CLM_local_ancestry_chr21.log, Out/CLM_local_ancestry_chr21.model, Out/CLM_local_ancestry_chr21.global.anc.gz
+    jobid: 42
+    reason: Missing output files: Out/CLM_local_ancestry_chr21.global.anc.gz, Out/CLM_local_ancestry_chr21.log, Out/CLM_local_ancestry_chr21.anc.vcf.gz, Out/CLM_local_ancestry_chr21.model; Input files updated by another job: admixedSubsetVCFs/CLM_hg38_chr21.vcf.gz
+    wildcards: anc=CLM, chr=21
+    resources: mem_mb=12000, mem_mib=11445, disk_mb=1112, disk_mib=1061, tmpdir=<TBD>, slurm_account=jazlynmo_738, slurm_partition=qcb, runtime=1440, tasks=16
+
+Job 42 has been submitted with SLURM jobid 18519639 (log: .snakemake/slurm_logs/rule_run_flare/18519639.log).
+[Mon Dec 18 17:06:32 2023]
+Finished job 42.
+2 of 21 steps (10%) done
+Select jobs to execute...
+
+[Mon Dec 18 17:06:32 2023]
+rule run_flare:
+    input: /project/jazlynmo_738/DataRepository/Human/1000GenomeNYGC_hg38/CCDG_14151_B01_GRM_WGS_2020-08-05_chr8.filtered.shapeit2-duohmm-phased.nodupmarkers.snps.vcf.gz, refPanels/CLM.ref.panel, admixedSubsetVCFs/CLM_hg38_chr8.vcf.gz, GRCh38_Map/plink.chr8.GRCh38.adjusted.map
+    output: Out/CLM_local_ancestry_chr8.anc.vcf.gz, Out/CLM_local_ancestry_chr8.log, Out/CLM_local_ancestry_chr8.model, Out/CLM_local_ancestry_chr8.global.anc.gz
+    jobid: 16
+    reason: Missing output files: Out/CLM_local_ancestry_chr8.model, Out/CLM_local_ancestry_chr8.anc.vcf.gz, Out/CLM_local_ancestry_chr8.log, Out/CLM_local_ancestry_chr8.global.anc.gz
+    wildcards: anc=CLM, chr=8
+    resources: mem_mb=12000, mem_mib=11445, disk_mb=4266, disk_mib=4069, tmpdir=<TBD>, slurm_account=jazlynmo_738, slurm_partition=qcb, runtime=1440, tasks=16
+
+Job 16 has been submitted with SLURM jobid 18519654 (log: .snakemake/slurm_logs/rule_run_flare/18519654.log).
+[Mon Dec 18 17:46:55 2023]
+Finished job 16.
+3 of 21 steps (14%) done
+Select jobs to execute...
+
+[Mon Dec 18 17:46:55 2023]
+rule run_flare:
+    input: /project/jazlynmo_738/DataRepository/Human/1000GenomeNYGC_hg38/CCDG_14151_B01_GRM_WGS_2020-08-05_chr13.filtered.shapeit2-duohmm-phased.nodupmarkers.snps.vcf.gz, refPanels/CLM.ref.panel, admixedSubsetVCFs/CLM_hg38_chr13.vcf.gz, GRCh38_Map/plink.chr13.GRCh38.adjusted.map
+    output: Out/CLM_local_ancestry_chr13.anc.vcf.gz, Out/CLM_local_ancestry_chr13.log, Out/CLM_local_ancestry_chr13.model, Out/CLM_local_ancestry_chr13.global.anc.gz
+    jobid: 26
+    reason: Missing output files: Out/CLM_local_ancestry_chr13.model, Out/CLM_local_ancestry_chr13.anc.vcf.gz, Out/CLM_local_ancestry_chr13.global.anc.gz, Out/CLM_local_ancestry_chr13.log
+    wildcards: anc=CLM, chr=13
+    resources: mem_mb=12000, mem_mib=11445, disk_mb=2776, disk_mib=2648, tmpdir=<TBD>, slurm_account=jazlynmo_738, slurm_partition=qcb, runtime=1440, tasks=16
+
+Job 26 has been submitted with SLURM jobid 18519681 (log: .snakemake/slurm_logs/rule_run_flare/18519681.log).
+[Mon Dec 18 18:21:17 2023]
+Finished job 26.
+4 of 21 steps (19%) done
+Select jobs to execute...
+
+[Mon Dec 18 18:21:17 2023]
+rule generate_gt:
+    input: /project/jazlynmo_738/DataRepository/Human/1000GenomeNYGC_hg38/FileInformation/pops/CLM_hg38.txt, /project/jazlynmo_738/DataRepository/Human/1000GenomeNYGC_hg38/CCDG_14151_B01_GRM_WGS_2020-08-05_chr9.filtered.shapeit2-duohmm-phased.nodupmarkers.snps.vcf.gz
+    output: admixedSubsetVCFs/CLM_hg38_chr9.vcf.gz
+    jobid: 19
+    reason: Missing output files: admixedSubsetVCFs/CLM_hg38_chr9.vcf.gz
+    wildcards: anc=CLM, chr=9
+    resources: mem_mb=12000, mem_mib=11445, disk_mb=2607, disk_mib=2487, tmpdir=<TBD>, slurm_account=jazlynmo_738, slurm_partition=qcb, runtime=1440, tasks=16
+
+Job 19 has been submitted with SLURM jobid 18519733 (log: .snakemake/slurm_logs/rule_generate_gt/18519733.log).
+[Mon Dec 18 18:27:08 2023]
+Finished job 19.
+5 of 21 steps (24%) done
+Select jobs to execute...
+
+[Mon Dec 18 18:27:08 2023]
+rule run_flare:
+    input: /project/jazlynmo_738/DataRepository/Human/1000GenomeNYGC_hg38/CCDG_14151_B01_GRM_WGS_2020-08-05_chr4.filtered.shapeit2-duohmm-phased.nodupmarkers.snps.vcf.gz, refPanels/CLM.ref.panel, admixedSubsetVCFs/CLM_hg38_chr4.vcf.gz, GRCh38_Map/plink.chr4.GRCh38.adjusted.map
+    output: Out/CLM_local_ancestry_chr4.anc.vcf.gz, Out/CLM_local_ancestry_chr4.log, Out/CLM_local_ancestry_chr4.model, Out/CLM_local_ancestry_chr4.global.anc.gz
+    jobid: 8
+    reason: Missing output files: Out/CLM_local_ancestry_chr4.global.anc.gz, Out/CLM_local_ancestry_chr4.log, Out/CLM_local_ancestry_chr4.model, Out/CLM_local_ancestry_chr4.anc.vcf.gz
+    wildcards: anc=CLM, chr=4
+    resources: mem_mb=12000, mem_mib=11445, disk_mb=5419, disk_mib=5168, tmpdir=<TBD>, slurm_account=jazlynmo_738, slurm_partition=qcb, runtime=1440, tasks=16
+
+Job 8 has been submitted with SLURM jobid 18519748 (log: .snakemake/slurm_logs/rule_run_flare/18519748.log).
